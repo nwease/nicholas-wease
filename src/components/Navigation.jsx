@@ -37,7 +37,7 @@ const Navigation = () => {
                         <li key={index}>
                             <Link to={link.path}>
                                 {link.title}
-                                HELLO
+                                HELLO YOU
                             </Link>
                         </li>
                     ))}
