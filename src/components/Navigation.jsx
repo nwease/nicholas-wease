@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Avatar } from 'antd';
 
 const navLinks = [
     {
@@ -26,19 +27,24 @@ const navLinks = [
 const Navigation = () => {
     return (
         <nav className='site-navigation'>
-            <span>
+            <span className='title'>
                 Nicholas Wease
             </span>
 
-            <ul>
-                { navLinks.map((link, index) => (
-                    <li key={index}>
-                        <Link to={link.path}>
-                            {link.title}
-                        </Link>
-                    </li>
-                ))}
-            </ul>
+            <div className='content-container'>
+                <ul>
+                    { navLinks.map((link, index) => (
+                        <li key={index}>
+                            <Link to={link.path}>
+                                {link.title}
+                            </Link>
+                        </li>
+                    ))}
+                </ul>
+
+                <Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" size={36} />
+
+            </div>
         </nav>
     );
 };
